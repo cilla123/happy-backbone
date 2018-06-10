@@ -3,6 +3,7 @@ const path = require('path')
 module.exports = {
   output: {
     path: path.join(__dirname, '../dist'),
+    // 此处用来以后配置cdn之类的路径
     publicPath: '/public/'
   },
   resolve: {
@@ -12,7 +13,6 @@ module.exports = {
     rules: [{
         enforce: 'pre',
         test: /.(js|jsx)$/,
-        // loader: 'eslint-loader',
         exclude: [
           path.resolve(__dirname, '../node_modules')
         ]
