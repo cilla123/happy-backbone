@@ -1,0 +1,36 @@
+{
+  "name": "happy-backbone",
+  "version": "0.0.1",
+  "description": "backbone 套件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:client": "cross-env NODE_ENV=development webpack-dev-server --mode development --config build/webpack.config.client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cilla123/happy-backbone.git"
+  },
+  "author": "Ben赖珏豪",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cilla123/happy-backbone/issues"
+  },
+  "homepage": "https://github.com/cilla123/happy-backbone#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "^5.1.6",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.3",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {}
+}
