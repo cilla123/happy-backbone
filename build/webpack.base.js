@@ -3,8 +3,7 @@ const path = require('path')
 module.exports = {
   output: {
     path: path.join(__dirname, '../dist'),
-    // 此处用来以后配置cdn之类的路径
-    publicPath: '/public/'
+    publicPath: '/public/',
   },
   resolve: {
     extensions: ['.js', '.jsx']

@@ -12,6 +12,7 @@ const config = webpackMerge(baseConfig, {
   },
   output: {
     filename: '[name].[hash].js',
+    publicPath: '/public/'
   },
   plugins: [
     new HTMLPlugin({
@@ -23,9 +24,7 @@ const config = webpackMerge(baseConfig, {
 // localhost:8888/filename
 if (isDev) {
   config.entry = {
-    app: [
-      path.join(__dirname, '../src/app.js')
-    ]
+    app: path.join(__dirname, '../src/app.js')
   }
   config.devServer = {
     host: '0.0.0.0',
