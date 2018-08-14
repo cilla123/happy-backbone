@@ -8,7 +8,7 @@ const isDev = process.env.NODE_ENV === 'development'
 
 const config = webpackMerge(baseConfig, {
   entry: {
-    app: path.join(__dirname, '../src/app.js'),
+    index: path.join(__dirname, '../src/views/index/index.js')
   },
   output: {
     filename: '[name].[hash].js',
@@ -16,15 +16,16 @@ const config = webpackMerge(baseConfig, {
   },
   plugins: [
     new HTMLPlugin({
-      template: path.join(__dirname, '../src/views/index.html')
+      template: path.join(__dirname, '../src/views/index/index.html')
     }),
   ]
 })
 
 // localhost:8888/filename
 if (isDev) {
+  // 入口文件
   config.entry = {
-    app: path.join(__dirname, '../src/app.js')
+    index: path.join(__dirname, '../src/views/index/index.js')
   }
   config.devServer = {
     host: '0.0.0.0',
